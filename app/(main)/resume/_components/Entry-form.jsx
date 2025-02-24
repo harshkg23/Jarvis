@@ -226,16 +226,17 @@ export function EntryForm({ type, entries, onChange }) {
               size="sm"
               onClick={handleImproveDescription}
               disabled={isImproving || !watch("description")}
+              className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-white font-bold shadow-lg hover:shadow-xl transform transition hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isImproving ? (
                 <>
-                  <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                  Improving...
+                  <Loader2 className="h-4 w-4 mr-2 animate-spin text-yellow-300" />
+                  <span className="text-yellow-300">Improving...</span>
                 </>
               ) : (
                 <>
-                  <Sparkles className="h-4 w-4 mr-2" />
-                  Improve with AI
+                  <Sparkles className="h-4 w-4 mr-2 text-yellow-300" />
+                  <span className="text-yellow-300">Improve with AI</span>
                 </>
               )}
             </Button>
