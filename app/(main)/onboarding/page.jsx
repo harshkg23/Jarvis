@@ -1,7 +1,8 @@
 import { redirect } from "next/navigation";
 import { industries } from "@/data/industries";
-import OnboardingForm from "./_components/onboarding-form";
+
 import { getUserOnboardingStatus } from "@/actions/user";
+import OnboardingForm from "./_components/Onboarding-form";
 
 export default async function OnboardingPage() {
   // Check if user is already onboarded
